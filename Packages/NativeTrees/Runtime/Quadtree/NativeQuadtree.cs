@@ -107,8 +107,8 @@ namespace NativeTrees
         /// </summary>
         public AABB2D Bounds => bounds;
 
-        public NativeParallelHashMap<uint, int> GetNodes() => nodes.AsReadOnly();
-        public NativeParallelMultiHashMap<uint, ObjWrapper> GetObjects() => objects.AsReadOnly();
+        public NativeParallelHashMap<uint, int>.ReadOnly GetNodes() => nodes.AsReadOnly();
+        public NativeParallelMultiHashMap<uint, ObjWrapper>.ReadOnly GetObjects() => objects.AsReadOnly();
 
         /// <summary>
         /// Insert an object into the tree.
