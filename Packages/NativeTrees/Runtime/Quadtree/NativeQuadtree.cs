@@ -107,6 +107,9 @@ namespace NativeTrees
         /// </summary>
         public AABB2D Bounds => bounds;
 
+        public NativeParallelHashMap<uint, int> GetNodes() => nodes.AsReadOnly();
+        public NativeParallelMultiHashMap<uint, ObjWrapper> GetObjects() => objects.AsReadOnly();
+
         /// <summary>
         /// Insert an object into the tree.
         /// </summary>
@@ -319,7 +322,7 @@ namespace NativeTrees
         /// <summary>
         /// Stores an object together with it's bounds
         /// </summary>
-        readonly struct ObjWrapper
+        public readonly struct ObjWrapper
         {
             public readonly AABB2D bounds;
             public readonly T obj;
