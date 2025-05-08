@@ -43,8 +43,8 @@ namespace NativeTrees
     /// </summary>
     public partial struct NativeQuadtree<T> : INativeDisposable where T : unmanaged 
     {
-        private readonly int maxDepth;
-        private readonly int objectsPerNode;
+        public readonly int maxDepth;
+        public readonly int objectsPerNode;
         
         private AABB2D bounds;
         private readonly float2 boundsCenter;  // Precomputed bounds values as they are used often
